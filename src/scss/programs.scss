@@ -15,7 +15,8 @@
 .programs_background {
   background-color: var.$bg_gray;
   color: white;
-  padding: 20px;
+  padding: 40px 5%;
+  position: relative;
 }
 
 .programs_title {
@@ -30,6 +31,9 @@
 }
 
 .programs_menu {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .programs_menu_item {
@@ -51,18 +55,22 @@
   transition: 0.3s;
 }
 
-.program_content {
+.program_mobile {
   display: none;
   transition: 0.8s;
 }
 
-.program_content_active {
+.program_mobile_active {
   display: block;
   border-bottom: 1px solid var.$fade_text_color;
   transition: 0.8s;
   font-size: 2vw;
   color: white;
   padding-bottom: 35px;
+}
+
+.program_desktop {
+  display: none;
 }
 
 //Signup Form
@@ -155,7 +163,7 @@ option {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px 0;
+  margin: 20px 10px;
   height: 5vw;
 }
 
@@ -173,6 +181,8 @@ option {
   border: none;
   font-size: 3vw;
   font-weight: 500;
+  color: black;
+  cursor: pointer;
 }
 
 .input_quantity {
@@ -193,14 +203,55 @@ option {
 
 .form_price {
   color: green;
-  font-size: 30px;
+  font-size: 4.5vw;
   font-weight: 700;
   margin: auto 0;
+  cursor: default;
 }
 
 .form_price::after {
   content: "$";
   font-weight: 700;
+}
+
+.accept_submit_container {
+  display: flex;
+  align-content: center;
+  height: 5vw;
+  margin: 15px 0 0;
+  padding: 5px 0;
+}
+
+.accept_box {
+  width: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.accept_terms_text {
+  width: 60%;
+}
+
+.sign_up_btn_container {
+  width: 35%;
+  margin-left: 10px;
+}
+
+.sign_up_btn {
+  width: 100%;
+  height: 5vw;
+  background-color: var.$bg_green;
+  color: white;
+  font-size: var.$form_input;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .form_price {
+    font-size: calc((4.5 / 100) * 600px);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -216,11 +267,105 @@ option {
     @include max_text(var.$max_form_label);
   }
 
+  .input_container,
+  .date_and_price_container,
+  .input_quantity_container,
+  .input_date_container,
+  .PhoneInputCountry,
+  .PhoneInputInput,
+  .accept_submit_container,
+  .accept_box,
+  .sign_up_btn {
+    height: calc((5 / 100) * 768px);
+  }
+
+  .quantity_button {
+    @include max_text(3);
+  }
+
   option,
   .PhoneInputInput,
   .input_quantity,
-  .date_input {
+  .date_input,
+  .sign_up_btn {
     @include max_text(var.$max_form_input);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .programs_background {
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 0;
+    height: 815px;
+  }
+
+  .programs_title {
+    font-size: calc((5 / 100) * 1000px);
+    margin-bottom: 10px;
+  }
+
+  .programs_container {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 92%;
+  }
+
+  .programs_menu {
+    max-height: 500px;
+  }
+
+  .programs_menu_item {
+    font-size: calc((3.5 / 100) * 1000px);
+  }
+  .programs_menu_item:hover {
+    font-size: calc((4 / 100) * 1000px);
+  }
+
+  .programs_menu {
+    min-width: 40%;
+  }
+
+  .programs_container_desktop_right {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin-left: 10%;
+    height: 96%;
+  }
+
+  .programs_menu_active {
+    border-bottom: 1px solid var.$fade_text_color;
+  }
+
+  .program_mobile_active {
+    display: none;
+  }
+
+  .program_desktop_active {
+    display: block;
+    transition: 0.8s;
+    font-size: calc((2 / 100) * 1000px);
+    color: white;
+    padding-bottom: 35px;
+    width: 90%;
+  }
+
+  .sign_up_container {
+    margin: 0 0 -50px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .programs_background {
+    height: 760px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .programs_background {
+    height: 740px;
   }
 }
 

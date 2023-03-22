@@ -16,7 +16,7 @@ const Welcome = () => {
               levels, from beginner to advanced.
             </p>
             <div className="welcome_button_container">
-              <a href="#programs" className="welcome_button">
+              <a href="#join_us" className="welcome_button">
                 Join us
               </a>
             </div>

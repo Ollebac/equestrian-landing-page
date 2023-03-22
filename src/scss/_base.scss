@@ -40,6 +40,11 @@ select {
   outline: none;
   font-size: var.$form_input;
   margin-top: 3px;
+  color: black;
+}
+
+select {
+  cursor: pointer;
 }
 
 input::-webkit-outer-spin-button,
