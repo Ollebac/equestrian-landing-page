@@ -216,6 +216,20 @@
 }
 
 @media screen and (min-width: 1500px) {
+  .about_us_background {
+    background: linear-gradient(
+      180deg,
+      var.$bg_white calc((45 / 100) * 1500px),
+      var.$bg_gray calc((45 / 100) * 1500px),
+      var.$bg_gray 85%,
+      var.$bg_white 85%
+    );
+  }
+
+  .about_us_content_container {
+    margin-top: calc((17 / 100) * 1500px);
+  }
+
   .about_us_title {
     @include max_text(var.$max_section_title);
   }
@@ -234,9 +248,14 @@
 
   .about_us_card_title {
     @include max_text(2.2);
+    height: calc((6.3 / 100) * 1500px);
   }
 
   .subscribe_title {
     @include max_text(2.2);
+  }
+
+  .about_us_icon {
+    margin-bottom: calc((2.2 / 100) * 1500px);
   }
 }
