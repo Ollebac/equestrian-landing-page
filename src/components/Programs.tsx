@@ -75,7 +75,7 @@ const Programs = () => {
 
           {/* Signup Form */}
           <div className="programs_container_desktop_right">
-            <div className="sign_up_container" id="sign_up">
+            <div className="sign_up_container" id="join_us">
               <h1 className="sign_up_header">Sign up for training</h1>
               <p className="sign_up_text">
                 Select the program and date of the lesson.

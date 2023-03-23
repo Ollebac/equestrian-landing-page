@@ -1,0 +1,242 @@
+@use "variables" as var;
+
+@mixin max_text($currentSize) {
+  font-size: calc(($currentSize / 100) * 1500px);
+}
+
+.about_us_background {
+  padding: 0 5%;
+  background: linear-gradient(
+    180deg,
+    var.$bg_white 45vw,
+    var.$bg_gray 45vw,
+    var.$bg_gray 85%,
+    var.$bg_white 85%
+  );
+}
+
+.about_us_content_container {
+  padding-bottom: 200px;
+  margin: 17vw auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about_us_title {
+  font-size: var.$section_title;
+  align-self: flex-start;
+  margin: 5px;
+}
+
+.about_us_title_description {
+  font-size: 1.8vw;
+  font-weight: lighter;
+  align-self: flex-start;
+  margin: 5px 5px 40px;
+  color: rgba(0, 0, 0, 0.452);
+  width: 45%;
+}
+
+.about_us_video_container {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.iframe_horse_video {
+  width: 100%;
+  height: 52vw;
+  max-height: 780px;
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  border: none;
+}
+
+.about_us_video_button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  bottom: 0vw;
+  right: 0;
+  cursor: pointer;
+  background-image: url("../../public/horse-video-button.png");
+  background-size: cover;
+  border: none;
+  display: block;
+  z-index: 1;
+}
+
+.iframe_horse_video_bottom {
+  height: 6vw;
+  max-height: 35px;
+  border-radius: 0 0 20px 20px;
+  background-color: var.$bg_green;
+  width: 100%;
+  margin-top: -1.5vw;
+  z-index: 2;
+  position: relative;
+}
+
+.play_button {
+  width: 60px;
+  filter: invert(100);
+  background: rgba(255, 255, 255, 0.383);
+  border-radius: 10px;
+  padding: 5px 25px 5px 30px;
+}
+
+.about_us_cards_container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.about_us_card {
+  margin-bottom: 8vw;
+}
+
+.about_us_icon {
+  width: 55px;
+  height: 55px;
+  margin: 20px auto 2.2vw auto;
+}
+
+.about_us_card_title {
+  font-size: 2.2vw;
+  height: 6.3vw;
+}
+
+.about_us_card_description {
+  width: 90%;
+  margin: auto;
+}
+
+.subscribe_container_cards {
+  display: grid;
+  grid-template-areas: "subscribe_card_right" "subscribe_card_left";
+  grid-template-rows: repeat(2);
+  width: 100%;
+  column-gap: 2vw;
+  row-gap: 5vw;
+}
+
+.subscribe_card_left {
+  border-radius: 20px;
+  background-color: white;
+  padding: 5vw;
+}
+
+.subscribe_card_right {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.email_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.subscribe_title {
+  width: 80%;
+  font-size: 2.2vw;
+  color: black;
+  background-color: white;
+}
+
+.email_form_btn_container {
+  width: 35%;
+  margin-left: 10px;
+  align-self: flex-end;
+}
+
+.email_form_btn {
+  width: 100%;
+  height: 5vw;
+  background-color: var.$bg_green;
+  color: white;
+  font-size: var.$form_input;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 500px) {
+  .iframe_horse_video_bottom {
+    margin-top: -1.2vw;
+  }
+
+  .subscribe_container_cards {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1000px) {
+  .about_us_background {
+    background: linear-gradient(
+      180deg,
+      var.$bg_white 45vw,
+      var.$bg_gray 45vw,
+      var.$bg_gray 85%,
+      var.$bg_white 85%
+    );
+  }
+
+  .about_us_cards_container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .subscribe_container_cards {
+    display: grid;
+    grid-template-areas: "subscribe_card_left subscribe_card_right";
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2vw;
+    width: 100%;
+  }
+
+  .subscribe_card_left {
+    padding: 50px;
+  }
+
+  .subscribe_card_right {
+  }
+
+  .subscribe_title {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .about_us_title {
+    @include max_text(var.$max_section_title);
+  }
+
+  .about_us_title_description {
+    @include max_text(1.8);
+  }
+
+  .iframe_horse_video_bottom {
+    margin-top: calc((1 / 100) * -1500px);
+  }
+
+  .about_us_card {
+    margin-bottom: calc((8 / 100) * 1500px);
+  }
+
+  .about_us_card_title {
+    @include max_text(2.2);
+  }
+
+  .subscribe_title {
+    @include max_text(2.2);
+  }
+}

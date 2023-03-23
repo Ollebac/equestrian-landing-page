@@ -5,6 +5,7 @@ import "./scss/styles.scss";
 import Nav from "./components/Nav";
 import Welcome from "./components/Welcome";
 import Programs from "./components/Programs";
+import About from "./components/About";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Nav />
       <Welcome />
       <Programs />
+      <About />
     </main>
   );
 }
