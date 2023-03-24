@@ -24,18 +24,18 @@
 }
 
 .about_us_title {
-  font-size: var.$section_title;
+  font-size: calc(2.2em + 1vw);
   align-self: flex-start;
   margin: 5px;
 }
 
 .about_us_title_description {
-  font-size: 1.8vw;
+  font-size: calc(0.75em + 1vw);
   font-weight: lighter;
   align-self: flex-start;
   margin: 5px 5px 40px;
   color: rgba(0, 0, 0, 0.452);
-  width: 45%;
+  width: 80%;
 }
 
 .about_us_video_container {
@@ -106,13 +106,14 @@
 }
 
 .about_us_card_title {
-  font-size: 2.2vw;
-  height: 6.3vw;
+  font-size: calc(1.2em + 1vw);
+  height: calc(2.4em + 1vw);
 }
 
 .about_us_card_description {
   width: 90%;
   margin: auto;
+  font-size: calc(0.75em + 1vw);
 }
 
 .subscribe_container_cards {
@@ -144,7 +145,7 @@
 
 .subscribe_title {
   width: 80%;
-  font-size: 2.2vw;
+  font-size: calc(1em + 1vw);
   color: black;
   background-color: white;
 }

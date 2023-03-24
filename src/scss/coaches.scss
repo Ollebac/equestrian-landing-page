@@ -1,0 +1,167 @@
+@use "variables" as var;
+
+@keyframes fadeIn-fadeOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+// .fadeIn_fadeOut {
+//   opacity: 0;
+//   animation-name: fadeIn-fadeOut;
+//   animation-iteration-count: 1;
+//   animation-timing-function: ease-in-out;
+//   animation-duration: 6s;
+// }
+
+.slideshow_container {
+  position: relative;
+  background-color: var.$bg_green;
+  border-radius: 20px;
+}
+
+.coaches_section_container {
+  padding: 0 5%;
+}
+
+.my_slides {
+  display: none;
+  background-color: var.$bg_green;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.coach_title {
+  z-index: 3;
+  padding-bottom: 3vw;
+  font-size: calc(2em + 1vw);
+  text-align: center;
+  // font-weight: 500;
+}
+
+.coach_outer_container {
+  padding: 4vw 6vw 6vw;
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.coach_inner_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_slides_left {
+  width: 100%;
+  max-width: 462px;
+}
+
+.my_slides_right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vw;
+}
+
+.coach_pic {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.coach_name {
+  font-size: calc(1em + 1vw);
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.coach_description {
+  font-size: calc(0.75em + 1vw);
+  padding-bottom: 3vw;
+}
+
+.coach_stats_container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.coach_stat {
+  width: 30%;
+  margin-right: 5%;
+}
+
+.coach_stat_number {
+  color: var.$bg_green;
+  font-size: 2.5vw;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.coach_stat_text {
+  font-size: 1.2vw;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6 ease;
+}
+
+.dots_container {
+  display: none;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+@media screen and (min-width: 768px) {
+  .dots_container {
+    display: block;
+    position: absolute;
+    bottom: 6vw;
+    right: 39vw;
+  }
+
+  .coach_inner_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: unset;
+  }
+
+  .coach_title {
+    width: 40%;
+  }
+
+  .my_slides_left {
+    width: 40%;
+  }
+
+  .my_slides_right {
+    min-height: 100%;
+    margin-top: 0;
+    width: 50%;
+    align-items: start;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+}

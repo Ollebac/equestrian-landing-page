@@ -6,6 +6,8 @@ import Nav from "./components/Nav";
 import Welcome from "./components/Welcome";
 import Programs from "./components/Programs";
 import About from "./components/About";
+import Coaches from "./components/Coaches";
+import ImagePanel from "./components/ImagePanel";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Welcome />
       <Programs />
       <About />
+      <Coaches />
+      <ImagePanel />
     </main>
   );
 }
