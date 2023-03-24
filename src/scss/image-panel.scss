@@ -1,0 +1,41 @@
+.marquee_top {
+  display: flex;
+  animation: slideLeft 60s linear infinite;
+  transform: translateX(-6vw);
+}
+
+.marquee_bottom {
+  display: flex;
+  animation: slideRight 60s linear infinite;
+  transform: translateX(-16vw);
+}
+
+.marquee_image {
+  width: 32vw;
+  margin: 1vw;
+  border-radius: 20px;
+}
+
+.marquee_image:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-6vw);
+  }
+
+  100% {
+    transform: translateX(-210vw);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-210vw);
+  }
+
+  100% {
+    transform: translateX(-6vw);
+  }
+}
