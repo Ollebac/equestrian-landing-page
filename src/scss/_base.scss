@@ -38,9 +38,8 @@ select {
   background: unset;
   width: 100%;
   outline: none;
-  font-size: var.$form_input;
-  margin-top: 3px;
   color: black;
+  padding-top: 2px;
 }
 
 select {
@@ -58,12 +57,4 @@ input[type="number"] {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    font-size: 18px;
-  }
-
-  input,
-  select {
-    @include max_text(var.$max_form_input);
-  }
 }

@@ -1,3 +1,7 @@
+.panel_container {
+  overflow-x: hidden;
+}
+
 .marquee_top {
   display: flex;
   animation: slideLeft 60s linear infinite;
@@ -11,13 +15,20 @@
 }
 
 .marquee_image {
-  width: 32vw;
-  margin: 1vw;
+  width: 250px;
+  margin: 10px;
   border-radius: 20px;
 }
 
 .marquee_image:hover {
   transform: scale(1.1);
+}
+
+@media screen and (min-width: 768px) {
+  .marquee_image {
+    width: 32vw;
+    margin: 1vw;
+  }
 }
 
 @keyframes slideLeft {

@@ -1,0 +1,82 @@
+@use "../variables" as var;
+
+.coach_title {
+  font-size: var.$section_title;
+}
+
+.coach_name {
+  font-size: var.$menu_title;
+  font-weight: 700;
+}
+
+.coach_description {
+  font-size: var.$general_text;
+}
+
+.coach_stat_number {
+  color: var.$bg_green;
+  font-size: var.$form_title;
+  font-weight: 700;
+}
+
+.coach_stat_text {
+  font-size: var.$form_label;
+}
+
+@media screen and (min-width: 768px) {
+  .coach_title {
+    font-size: var.$max_section_title;
+  }
+
+  .coach_name {
+    font-size: var.$max_menu_title;
+  }
+
+  .coach_description {
+    font-size: var.$desktop_general_text;
+  }
+
+  .coach_stat_number {
+    color: var.$bg_green;
+    font-size: var.$form_title;
+    font-weight: 700;
+  }
+
+  .coach_stat_text {
+    font-size: var.$max_form_label;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .coach_name {
+    font-size: 2.6vw;
+  }
+  .coach_description {
+    font-size: 1.6vw;
+  }
+
+  .coach_stat_number {
+    font-size: 2.5vw;
+  }
+
+  .coach_stat_text {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .coach_name {
+    font-size: calc((2.6 / 100) * 1400px);
+  }
+  .coach_description {
+    font-size: calc((1.6 / 100) * 1400px);
+  }
+
+  .coach_stat_number {
+    font-size: calc((2.5 / 100) * 1400px);
+  }
+
+  .coach_stat_text {
+    font-size: calc((1.2 / 100) * 1400px);
+  }
+}

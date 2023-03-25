@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import "../scss/coaches.scss";
+
+import "../scss/Coaches/coaches.scss";
+import "../scss/Coaches/fonts.scss";
 
 const CreateCoach = ({
   coach,
@@ -140,7 +142,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   dots[slideIndex - 1].className += " active";
 });
 
-// setInterval(plusSlides, 6000);
+setInterval(plusSlides, 6000);
 
 const Coaches = () => {
   useEffect(() => {}, []);

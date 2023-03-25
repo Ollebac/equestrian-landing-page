@@ -1,0 +1,63 @@
+@use "../variables" as var;
+
+.welcome_intro {
+  font-size: var.$sub_title;
+  color: var.$fade_text_color;
+}
+
+.welcome_title_1,
+.welcome_title_2 {
+  font-size: var.$site_title;
+}
+
+.welcome_text {
+  font-size: var.$site_title_subtext;
+  color: var.$fade_text_color;
+}
+
+.welcome_button {
+  font-size: var.$general_text;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .welcome_intro {
+    font-size: var.$desktop_sub_title;
+    color: black;
+  }
+
+  .welcome_title_1,
+  .welcome_title_2 {
+    font-size: var.$desktop_site_title;
+  }
+
+  .welcome_text,
+  .more_horses_text {
+    font-size: var.$desktop_site_title_subtext;
+    color: black;
+  }
+
+  .welcome_button {
+    font-size: var.$desktop_general_text;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .welcome_intro {
+    font-size: var.$max_sub_title;
+  }
+
+  .welcome_title_1,
+  .welcome_title_2 {
+    font-size: var.$max_site_title;
+  }
+
+  .welcome_text,
+  .more_horses_text {
+    font-size: var.$max_site_title_subtext;
+  }
+
+  .welcome_button {
+    font-size: var.$max_general_text;
+  }
+}

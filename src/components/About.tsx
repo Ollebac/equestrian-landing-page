@@ -1,4 +1,5 @@
-import "../scss/about.scss";
+import "../scss/About/about.scss";
+import "../scss/About/fonts.scss";
 
 import { useEffect } from "react";
 import ReactPlayer from "react-player";

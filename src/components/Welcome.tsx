@@ -1,4 +1,5 @@
-import "../scss/welcome.scss";
+import "../scss/Welcome/welcome.scss";
+import "../scss/Welcome/fonts.scss";
 
 const Welcome = () => {
   return (

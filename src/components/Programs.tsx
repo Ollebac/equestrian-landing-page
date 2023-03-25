@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import "../scss/programs.scss";
+import "../scss/Programs/programs.scss";
+import "../scss/Programs/fonts.scss";
+
 import { navigatePrograms } from "../functions/navigate_programs";
 
+import { useEffect, useState } from "react";
 import { setFormValues } from "../functions/setFormValues";
 import { submitForm } from "../functions/submitForm";
 

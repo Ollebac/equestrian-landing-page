@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "../variables" as var;
 
 @keyframes fadeIn-fadeOut {
   0% {
@@ -15,13 +15,13 @@
   }
 }
 
-// .fadeIn_fadeOut {
-//   opacity: 0;
-//   animation-name: fadeIn-fadeOut;
-//   animation-iteration-count: 1;
-//   animation-timing-function: ease-in-out;
-//   animation-duration: 6s;
-// }
+.fadeIn_fadeOut {
+  opacity: 0;
+  animation-name: fadeIn-fadeOut;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-duration: 6s;
+}
 
 .slideshow_container {
   position: relative;
@@ -30,7 +30,7 @@
 }
 
 .coaches_section_container {
-  padding: 0 5%;
+  padding: 30px 5%;
 }
 
 .my_slides {
@@ -43,9 +43,7 @@
 .coach_title {
   z-index: 3;
   padding-bottom: 3vw;
-  font-size: calc(2em + 1vw);
   text-align: center;
-  // font-weight: 500;
 }
 
 .coach_outer_container {
@@ -64,13 +62,13 @@
 .my_slides_left {
   width: 100%;
   max-width: 462px;
+  height: 100%;
 }
 
 .my_slides_right {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 5vw;
 }
 
@@ -80,14 +78,11 @@
 }
 
 .coach_name {
-  font-size: calc(1em + 1vw);
-  font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 5vw;
 }
 
 .coach_description {
-  font-size: calc(0.75em + 1vw);
-  padding-bottom: 3vw;
+  padding-bottom: 5px;
 }
 
 .coach_stats_container {
@@ -101,14 +96,7 @@
 }
 
 .coach_stat_number {
-  color: var.$bg_green;
-  font-size: 2.5vw;
   margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.coach_stat_text {
-  font-size: 1.2vw;
 }
 
 .dot {
@@ -131,7 +119,17 @@
   background-color: #717171;
 }
 
+@media screen and (min-width: 550px) {
+  .coach_stat {
+    width: 24%;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .coaches_section_container {
+    padding-bottom: 100px;
+  }
+
   .dots_container {
     display: block;
     position: absolute;
@@ -144,6 +142,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: unset;
+    min-height: 465px;
   }
 
   .coach_title {
@@ -152,6 +151,7 @@
 
   .my_slides_left {
     width: 40%;
+    margin: auto 0;
   }
 
   .my_slides_right {
@@ -161,7 +161,33 @@
     align-items: start;
     justify-content: space-between;
   }
+
+  .coach_stat {
+    width: 33%;
+  }
+
+  .coach_name {
+    margin-bottom: 10px;
+  }
+
+  .coach_stat_number {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1000px) {
+  .coach_title {
+    padding-bottom: 30px;
+  }
+
+  .dots_container {
+    bottom: 90px;
+    right: 585px;
+  }
+
+  .coach_outer_container {
+    padding: 60px 90px 90px;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+  }
 }
