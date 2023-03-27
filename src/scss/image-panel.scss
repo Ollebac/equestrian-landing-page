@@ -4,14 +4,14 @@
 
 .marquee_top {
   display: flex;
-  animation: slideLeft 60s linear infinite;
+  animation: slideLeft 30s linear infinite;
   transform: translateX(-6vw);
 }
 
 .marquee_bottom {
   display: flex;
-  animation: slideRight 60s linear infinite;
-  transform: translateX(-16vw);
+  animation: slideRight 30s linear infinite;
+  transform: translateX(-210vw);
 }
 
 .marquee_image {
@@ -28,6 +28,24 @@
   .marquee_image {
     width: 32vw;
     margin: 1vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .marquee_image {
+    width: 320px;
+    margin: 10px;
+  }
+
+  .marquee_top {
+    animation: slideLeftMax 30s linear infinite;
+    transform: translateX(-80px);
+  }
+
+  .marquee_bottom {
+    display: flex;
+    animation: slideRightMax 30s linear infinite;
+    transform: translateX(-2120px);
   }
 }
 
@@ -48,5 +66,25 @@
 
   100% {
     transform: translateX(-6vw);
+  }
+}
+
+@keyframes slideLeftMax {
+  0% {
+    transform: translateX(-80px);
+  }
+
+  100% {
+    transform: translateX(-2120px);
+  }
+}
+
+@keyframes slideRightMax {
+  0% {
+    transform: translateX(-2120px);
+  }
+
+  100% {
+    transform: translateX(-80px);
   }
 }
