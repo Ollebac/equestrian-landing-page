@@ -1,30 +1,5 @@
 @use "../variables" as var;
 
-.programs_background {
-  color: white;
-}
-
-.programs_title {
-  font-size: var.$section_title;
-}
-
-.programs_menu_item {
-  font-size: var.$menu_title;
-  color: var.$fade_text_color;
-}
-
-.programs_menu_active {
-  color: white;
-}
-
-.programs_menu_item:hover {
-  transform: scale(1.1);
-}
-
-.program_mobile {
-  font-size: var.$general_text;
-}
-
 .sign_up_header,
 .form_price {
   font-size: var.$form_title;
@@ -37,7 +12,6 @@ select,
 input,
 .quantity_button,
 .date_input,
-.sign_up_btn,
 .input_quantity,
 .PhoneInputInput {
   font-size: var.$form_label;
@@ -49,7 +23,6 @@ input,
   select,
   .quantity_button,
   .date_input,
-  .sign_up_btn,
   .input_quantity,
   .PhoneInputInput {
     font-size: var.$form_input;
@@ -72,36 +45,8 @@ input,
   select,
   .quantity_button,
   .date_input,
-  .sign_up_btn,
   .input_quantity,
   .PhoneInputInput {
     font-size: var.$max_form_input;
-  }
-}
-
-@media screen and (min-width: 768px) {
-}
-
-@media screen and (min-width: 1000px) {
-  .programs_title {
-    font-size: var.$max_section_title;
-    // font-size: calc((5 / 100) * 1000px);
-  }
-
-  .programs_menu_item {
-    font-size: var.$max_menu_title;
-    // font-size: calc((3.5 / 100) * 1000px);
-  }
-
-  .program_desktop_active {
-    font-size: var.$max_general_text;
-    color: white;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .programs_title {
-    font-size: var.$max_section_title;
-    // font-size: calc((5 / 100) * 1000px);
   }
 }

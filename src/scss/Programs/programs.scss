@@ -10,6 +10,7 @@
 
 .programs_background {
   background-color: var.$bg_gray;
+  color: white;
   padding: 40px 5%;
   position: relative;
 }
@@ -35,14 +36,14 @@
   border-bottom: 1px solid var.$fade_text_color;
   transition: 0.3s;
   cursor: pointer;
+  color: var.$fade_text_color;
+  display: inline;
+  // width: 30%;
 }
 
 .programs_menu_active {
   border: none;
-}
-
-.programs_menu_item:hover {
-  transition: 0.3s;
+  color: white;
 }
 
 .program_mobile {
@@ -264,9 +265,6 @@
 
   .programs_menu {
     max-height: 500px;
-  }
-
-  .programs_menu {
     min-width: 40%;
   }
 
@@ -277,6 +275,11 @@
     padding-top: 30px;
     margin-left: 10%;
     height: 96%;
+  }
+
+  .programs_menu_item:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
   }
 
   .programs_menu_active {
@@ -292,7 +295,7 @@
     transition: 0.8s;
     line-height: 1.5;
     padding-bottom: 35px;
-    width: 80%;
+    width: 95%;
   }
 
   .sign_up_container {
@@ -310,7 +313,4 @@
   .programs_background {
     height: 740px;
   }
-}
-
-@media screen and (min-width: 1500px) {
 }

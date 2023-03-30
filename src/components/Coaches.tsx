@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import "../scss/Coaches/coaches.scss";
-import "../scss/Coaches/fonts.scss";
+import "../scss/fonts.scss";
 
 const CreateCoach = ({
   coach,
@@ -22,28 +22,32 @@ const CreateCoach = ({
 }) => {
   return (
     <div className="coach_outer_container">
-      <h3 className="coach_title">Coaches</h3>
+      <h3 className="coach_title headerLarge">Coaches</h3>
       <div className="coach_inner_container">
         <div className="my_slides_left fadeIn_fadeOut ">
           <img src={picSource} className="coach_pic" alt={picAlt} />
         </div>
         <div className="my_slides_right fadeIn_fadeOut ">
           <div className="coach_name_description_container">
-            <h4 className="coach_name">{coach}</h4>
-            <p className="coach_description">{description}</p>
+            <h4 className="coach_name headerMedium">{coach}</h4>
+            <p className="coach_description general_text">{description}</p>
           </div>
           <div className="coach_stats_container">
             <div className="coach_stat">
-              <p className="coach_stat_number">{yearsRiding}</p>
-              <p className="coach_stat_text">years experience with horses</p>
+              <p className="coach_stat_number headerMedium">{yearsRiding}</p>
+              <p className="coach_stat_text general_text">
+                years experience with horses
+              </p>
             </div>
             <div className="coach_stat">
-              <p className="coach_stat_number">{awards}</p>
-              <p className="coach_stat_text">International awards</p>
+              <p className="coach_stat_number headerMedium">{awards}</p>
+              <p className="coach_stat_text general_text">
+                International awards
+              </p>
             </div>
             <div className="coach_stat">
-              <p className="coach_stat_number">{statNum_3}</p>
-              <p className="coach_stat_text"></p>
+              <p className="coach_stat_number headerMedium">{statNum_3}</p>
+              <p className="coach_stat_text general_text"></p>
             </div>
           </div>
         </div>

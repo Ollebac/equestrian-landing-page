@@ -1,0 +1,88 @@
+.review_section_container {
+  margin: clamp(30px, 10vw, 100px) 5%;
+}
+
+.mosaic_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.review_container {
+  background-color: white;
+  padding: 4vw 2vw;
+  box-shadow: 0 0 10px 1px rgb(210, 210, 210);
+  border-radius: 20px;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review_title_description {
+  padding: 5px 0 20px 0;
+}
+
+.review_title_container {
+  grid-area: review_title;
+}
+.review1 {
+  grid-area: review1;
+}
+.review2 {
+  grid-area: review2;
+}
+.review3 {
+  grid-area: review3;
+}
+.review4 {
+  grid-area: review4;
+}
+
+.reviewer_outer_container {
+  display: flex;
+  margin-top: 1.5vw;
+}
+
+.review_content {
+  line-height: 1.7;
+}
+
+.reviewer_image {
+  width: clamp(50px, 5vw, 75px);
+  padding: 0 10px;
+}
+
+.reviewer_inner_container {
+  align-self: flex-end;
+}
+
+.reviewer_name {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.review_about {
+  font-size: 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .mosaic_container {
+    display: grid;
+    grid-template-areas:
+      "review_title review1 review2"
+      "review3 review1 review2"
+      "review3 review1 review2"
+      "review3 review4 review4"
+      "review3 review4 review4";
+    gap: 20px;
+  }
+
+  .review_container {
+    background-color: white;
+    padding: 40px 20px;
+  }
+
+  .reviewer_outer_container {
+    margin-top: 15px;
+  }
+}

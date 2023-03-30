@@ -30,7 +30,7 @@
 }
 
 .coaches_section_container {
-  padding: 30px 5%;
+  padding: 0 5%;
 }
 
 .my_slides {
@@ -97,6 +97,8 @@
 
 .coach_stat_number {
   margin-bottom: 10px;
+  color: var.$bg_green;
+  font-weight: 700;
 }
 
 .dot {
@@ -126,10 +128,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .coaches_section_container {
-    padding-bottom: 100px;
-  }
-
   .dots_container {
     display: block;
     position: absolute;
@@ -181,13 +179,19 @@
   }
 
   .dots_container {
-    bottom: 90px;
-    right: 585px;
+    bottom: 60px;
   }
 
   .coach_outer_container {
     padding: 60px 90px 90px;
     background-color: white;
     border-radius: 20px 20px 0 0;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .dots_container {
+    bottom: 70px;
+    right: 585px;
   }
 }

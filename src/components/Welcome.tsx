@@ -1,23 +1,23 @@
 import "../scss/Welcome/welcome.scss";
-import "../scss/Welcome/fonts.scss";
+import "../scss/fonts.scss";
 
 const Welcome = () => {
   return (
     <>
-      <div className="welcome_container">
+      <div className="welcome_container" id="home">
         <div className="welcome_content_container">
           <div className="welcome_content">
-            <p className="welcome_intro">Welcome to</p>
+            <p className="welcome_intro sub_title">Welcome to</p>
             <div className="welcome_title_container">
-              <h1 className="welcome_title_1">Equestrian&nbsp;</h1>
-              <h1 className="welcome_title_2">club</h1>
+              <h1 className="welcome_title_1 site_header">Equestrian&nbsp;</h1>
+              <h1 className="welcome_title_2 site_header">club</h1>
             </div>
-            <p className="welcome_text">
+            <p className="welcome_text general_text">
               We offer a variety of resources for horse enthusiasts of all
               levels, from beginner to advanced.
             </p>
             <div className="welcome_button_container">
-              <a href="#join_us" className="welcome_button">
+              <a href="#join_us" className="welcome_button general_text">
                 Join us
               </a>
             </div>
@@ -40,7 +40,7 @@ const Welcome = () => {
                 alt="Horse 1 Image"
               />
             </div>
-            <p className="more_horses_text">
+            <p className="more_horses_text general_text">
               More than 20 horses for different levels of riders.
             </p>
           </div>

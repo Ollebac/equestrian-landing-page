@@ -1,7 +1,11 @@
 @use "../variables" as var;
 
-@mixin max_text($currentSize) {
-  // font-size: calc(($currentSize / 100) * 1500px);
+.input_email {
+  background-color: rgba(149, 149, 149, 0.199);
+  border-radius: 10px;
+  padding: 10px;
+  height: 20px;
+  margin: 10px;
 }
 
 .about_us_background {
@@ -121,12 +125,13 @@
   width: 100%;
   column-gap: 2vw;
   row-gap: 5vw;
+  max-width: 1000px;
 }
 
 .subscribe_card_left {
   border-radius: 20px;
   background-color: white;
-  padding: 5vw;
+  padding: 2vw;
 }
 
 .subscribe_card_right {
@@ -144,19 +149,19 @@
 .subscribe_title {
   width: 80%;
   background-color: white;
+  margin: 10px;
 }
 
 .email_form_btn_container {
   width: 35%;
-  margin-left: 10px;
+  margin: 10px;
   align-self: flex-end;
 }
 
-.email_form_btn {
+.sign_up_btn {
   width: 100%;
-  height: 5vw;
+  height: 30px;
   background-color: var.$bg_green;
-  border: none;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -229,10 +234,6 @@
     margin-top: calc((17 / 100) * 1500px);
   }
 
-  .about_us_title_description {
-    @include max_text(1.8);
-  }
-
   .iframe_horse_video_bottom {
     margin-top: calc((1 / 100) * -1500px);
   }
@@ -242,12 +243,7 @@
   }
 
   .about_us_card_title {
-    @include max_text(2.2);
     height: calc((6.3 / 100) * 1500px);
-  }
-
-  .subscribe_title {
-    @include max_text(2.2);
   }
 
   .about_us_icon {

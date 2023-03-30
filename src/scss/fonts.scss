@@ -1,0 +1,25 @@
+@use "./variables" as var;
+
+.site_header {
+  font-size: var.$site_title;
+}
+
+.sub_title {
+  font-size: var.$sub_title;
+}
+
+.general_text {
+  font-size: var.$general_text;
+}
+
+.headerLarge {
+  font-size: var.$section_header;
+}
+
+.headerMedium {
+  font-size: var.$header_medium_text;
+}
+
+.headerSmall {
+  font-size: var.$header_small_text;
+}

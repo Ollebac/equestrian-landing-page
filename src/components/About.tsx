@@ -1,8 +1,8 @@
 import "../scss/About/about.scss";
-import "../scss/About/fonts.scss";
+// import "../scss/About/fonts.scss";
+import "../scss/fonts.scss";
 
 import { useEffect } from "react";
-import ReactPlayer from "react-player";
 
 const playVideo = () => {
   const button = document.getElementById("about_us_video_button");
@@ -16,10 +16,10 @@ const playVideo = () => {
 export const About = () => {
   useEffect(() => {}, []);
   return (
-    <section className="about_us_background">
+    <section className="about_us_background" id="about">
       <div className="about_us_content_container">
-        <h2 className="about_us_title">About us</h2>
-        <h3 className="about_us_title_description">
+        <h2 className="about_us_title headerLarge">About us</h2>
+        <h3 className="about_us_title_description sub_title">
           Join us today and experience the joys of horseback riding!
         </h3>
 
@@ -44,10 +44,10 @@ export const About = () => {
         <div className="about_us_cards_container">
           <div className="about_us_card">
             <img src="icon-heart.svg" className="about_us_icon" />
-            <h3 className="about_us_card_title">
+            <h3 className="about_us_card_title headerSmall">
               Developing a strong bond with the horse
             </h3>
-            <p className="about_us_card_description">
+            <p className="about_us_card_description general_text">
               Participating in an equestrian club provides riders with the
               opportunity to form a strong and trusting bond with their horse.
               This bond is formed through regular training, riding, and
@@ -56,8 +56,10 @@ export const About = () => {
           </div>
           <div className="about_us_card">
             <img src="icon-checkmark.svg" className="about_us_icon" />
-            <h3 className="about_us_card_title">Learning new skills</h3>
-            <p className="about_us_card_description">
+            <h3 className="about_us_card_title headerSmall">
+              Learning new skills
+            </h3>
+            <p className="about_us_card_description general_text">
               Equestrian clubs offer riders the chance to learn a variety of
               skills and techniques, including dressage, show jumping and
               cross-country riding. Riders can also learn about horse care,
@@ -66,8 +68,10 @@ export const About = () => {
           </div>
           <div className="about_us_card">
             <img src="icon-people.svg" className="about_us_icon" />
-            <h3 className="about_us_card_title">Networking and camaraderie</h3>
-            <p className="about_us_card_description">
+            <h3 className="about_us_card_title headerSmall">
+              Networking and camaraderie
+            </h3>
+            <p className="about_us_card_description general_text">
               Joining an equestrian club provides members with a great
               opportunity to meet other riders, exchange ideas, and make new
               friends. Many clubs also host events and competitions which can be
@@ -83,24 +87,27 @@ export const About = () => {
               className="email_form"
               id="email_form"
             >
-              <h3 className="subscribe_title">
+              <h3 className="subscribe_title headerSmall">
                 Subscribe to the newsletter and get 5% discount on your first
                 training
               </h3>
-              <div className="input_container">
-                <label htmlFor="email" className="form_label">
-                  <b>Email</b>
-                </label>
+              <div className="input_email">
+                <label htmlFor="email" className="form_label"></label>
                 <input
                   type="email"
                   id="form_input_email"
                   placeholder="Your Email Address"
                   name="email"
+                  className="general_text"
                   required
                 />
               </div>
               <div className="email_form_btn_container">
-                <button type="submit" className="sign_up_btn" id="sign_up_btn">
+                <button
+                  type="submit"
+                  className="sign_up_btn general_text"
+                  id="sign_up_btn"
+                >
                   Join us
                 </button>
               </div>

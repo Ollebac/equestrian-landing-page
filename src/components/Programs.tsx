@@ -1,5 +1,6 @@
 import "../scss/Programs/programs.scss";
 import "../scss/Programs/fonts.scss";
+import "../scss/fonts.scss";
 
 import { navigatePrograms } from "../functions/navigate_programs";
 
@@ -60,19 +61,25 @@ const Programs = () => {
   return (
     <>
       <section className="programs_background" id="programs">
-        <h2 className="programs_title">Our programs</h2>
+        <h2 className="programs_title headerLarge">Our programs</h2>
         <div className="programs_container">
           <ul className="programs_menu">
-            <li className="programs_menu_item programs_menu_active">Jumping</li>
-            <li className="program_mobile program_mobile_active">
+            <li className="programs_menu_item programs_menu_active headerMedium">
+              Jumping
+            </li>
+            <li className="program_mobile program_mobile_active general_text">
               {DescriptionJumping}
             </li>
-            <li className="programs_menu_item">Dressage</li>
-            <li className="program_mobile">{DescriptionDressage}</li>
-            <li className="programs_menu_item">Horse rides</li>
-            <li className="program_mobile">{DescriptionRiding}</li>
-            <li className="programs_menu_item">Photoshoot</li>
-            <li className="program_mobile">{DescriptionPhotoshoot}</li>
+            <li className="programs_menu_item headerMedium">Dressage</li>
+            <li className="program_mobile general_text">
+              {DescriptionDressage}
+            </li>
+            <li className="programs_menu_item headerMedium">Horse rides</li>
+            <li className="program_mobile general_text">{DescriptionRiding}</li>
+            <li className="programs_menu_item headerMedium">Photoshoot</li>
+            <li className="program_mobile general_text">
+              {DescriptionPhotoshoot}
+            </li>
           </ul>
 
           {/* Signup Form */}
@@ -206,7 +213,7 @@ const Programs = () => {
                   <div className="sign_up_btn_container">
                     <button
                       type="submit"
-                      className="sign_up_btn"
+                      className="sign_up_btn general_text"
                       id="sign_up_btn"
                     >
                       Join us
@@ -216,12 +223,18 @@ const Programs = () => {
               </form>
             </div>
             <ul>
-              <li className="program_desktop program_desktop_active">
+              <li className="program_desktop program_desktop_active general_text">
                 {DescriptionJumping}
               </li>
-              <li className="program_desktop">{DescriptionDressage}</li>
-              <li className="program_desktop">{DescriptionRiding}</li>
-              <li className="program_desktop">{DescriptionPhotoshoot}</li>
+              <li className="program_desktop general_text">
+                {DescriptionDressage}
+              </li>
+              <li className="program_desktop general_text">
+                {DescriptionRiding}
+              </li>
+              <li className="program_desktop general_text">
+                {DescriptionPhotoshoot}
+              </li>
             </ul>
           </div>
         </div>

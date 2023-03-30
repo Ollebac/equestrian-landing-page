@@ -16,7 +16,6 @@ $desktop_site_title_subtext: 1.1vw;
 $desktop_sub_title: 2vw;
 $desktop_general_text: calc((1.1 / 100) * 1500px);
 $desktop_card_title: 2.7vw;
-// $desktop_menu_title:
 
 //  calc((1 / 100) * 1500px);
 
@@ -52,3 +51,10 @@ $form_input: calc(0.75rem + 1vw);
 $max_form_title: calc(1.25rem + ((1 / 100) * 612px));
 $max_form_label: calc(0.4rem + ((1 / 100) * 612px));
 $max_form_input: calc(0.75rem + ((1 / 100) * 612px));
+
+$site_title: clamp(50px, 6.4vw, 96px);
+$sub_title: clamp(20px, 2vw, 30px);
+$general_text: 16px;
+$section_header: clamp(42px, 4.75vw, 55px);
+$header_medium_text: clamp(25px, 2.5vw, 30px);
+$header_small_text: clamp(22.5px, 2.7vw, 25px);

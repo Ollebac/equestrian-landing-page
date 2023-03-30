@@ -7,7 +7,11 @@ import Welcome from "./components/Welcome";
 import Programs from "./components/Programs";
 import About from "./components/About";
 import Coaches from "./components/Coaches";
+import Reviews from "./components/Reviews";
 import ImagePanel from "./components/ImagePanel";
+import FAQ from "./components/FAQ";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,7 +21,11 @@ function App() {
       <Programs />
       <About />
       <Coaches />
+      <Reviews />
       <ImagePanel />
+      <FAQ />
+      <Contact />
+      <Footer />
     </main>
   );
 }

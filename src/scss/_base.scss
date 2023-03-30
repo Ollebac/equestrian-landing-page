@@ -1,15 +1,11 @@
 @use "variables" as var;
 
-@mixin max_text($currentSize) {
-  font-size: calc(($currentSize / 100) * 768px);
-}
-
 body {
   background-color: var.$bg_white;
   font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 * {
