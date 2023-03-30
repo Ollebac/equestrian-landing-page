@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "../variables" as var;
 
 @mixin max_text($currentSize) {
   font-size: calc(($currentSize / 100) * 1500px);

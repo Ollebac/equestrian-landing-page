@@ -37,13 +37,17 @@ export const About = () => {
             className="about_us_video_button"
             id="about_us_video_button"
           >
-            <img src="play_button.png" className="play_button" />
+            <img
+              src="/icons/icon-play-button.png"
+              alt="Play Button"
+              className="play_button"
+            />
           </button>
           <div className="iframe_horse_video_bottom"> </div>
         </div>
         <div className="about_us_cards_container">
           <div className="about_us_card">
-            <img src="icon-heart.svg" className="about_us_icon" />
+            <img src="/icons/icon-heart.svg" className="about_us_icon" />
             <h3 className="about_us_card_title headerSmall">
               Developing a strong bond with the horse
             </h3>
@@ -55,7 +59,7 @@ export const About = () => {
             </p>
           </div>
           <div className="about_us_card">
-            <img src="icon-checkmark.svg" className="about_us_icon" />
+            <img src="/icons/icon-checkmark.svg" className="about_us_icon" />
             <h3 className="about_us_card_title headerSmall">
               Learning new skills
             </h3>
@@ -67,7 +71,7 @@ export const About = () => {
             </p>
           </div>
           <div className="about_us_card">
-            <img src="icon-people.svg" className="about_us_icon" />
+            <img src="/icons/icon-people.svg" className="about_us_icon" />
             <h3 className="about_us_card_title headerSmall">
               Networking and camaraderie
             </h3>
@@ -113,7 +117,11 @@ export const About = () => {
               </div>
             </form>
           </div>
-          <img src="horse-subscribe.jpg" className="subscribe_card_right" />
+          <img
+            src="/images/horse-subscribe.jpg"
+            alt="Horse Image"
+            className="subscribe_card_right"
+          />
         </div>
       </div>
     </section>

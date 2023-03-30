@@ -1,4 +1,4 @@
-import "../scss/nav.scss";
+import "../scss/Nav/nav.scss";
 
 const openNav = () => {
   var menu = document.getElementById("popup_nav");
@@ -17,11 +17,11 @@ const Nav = () => {
   return (
     <>
       <a className="nav_bubble" id="nav_bubble" onClick={openNav}>
-        <img src="/icon-hamburger.svg" width={30} height={20} />
+        <img src="/icons/icon-hamburger.svg" width={30} height={20} />
       </a>
       <nav className="outer_nav_container">
         <a className="site_logo_container" href="#home">
-          <img src="/logo-horse.svg" className="site_logo" alt="Site Logo" />
+          <img src="/site-logo.svg" className="site_logo" alt="Site Logo" />
         </a>
         <ul className="inner_nav_container">
           <li className="nav_item">

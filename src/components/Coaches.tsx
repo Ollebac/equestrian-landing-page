@@ -62,7 +62,7 @@ const Brianna = (
     description={
       "As a horse riding trainer, my passion for horses began at a young age when I started taking riding lessons. I have since dedicated my life to mastering the art of horsemanship and helping others do the same. I have trained and competed in a variety of disciplines, including dressage, show jumping, and eventing. I have also worked with horses of all ages and levels of experience, from green broke to highly trained."
     }
-    picSource={"coach-brianna.jpg"}
+    picSource={"/people/coach-brianna.jpg"}
     picAlt={"Coach Brianna Picture"}
     yearsRiding={"10"}
     awards={"+6"}
@@ -75,7 +75,7 @@ const Mayumi = (
     description={
       "Mayumi is an expereinced and knowledgable instructor who specializes in providing student with a comprehensive show jumping program. By utilizing a mixture of private and group lessons, Mayumi is able to give each student the individual attention and instruction they need to excel. Through a combination of skill development and practice sessions, Mayumi is able to help riders reach their maximum potential in the sport of show jumping."
     }
-    picSource={"coach-mayumi.jpg"}
+    picSource={"/people/coach-mayumi.jpg"}
     picAlt={"Coach Mayumi Picture"}
     yearsRiding={"7"}
     awards={"+3"}
@@ -88,7 +88,7 @@ const Jack = (
     description={
       "As a horseback riding coach, I have a deep passion for helping riders achieve their goals and reach their full potential in the saddle. I have spent many years honing my skills as a rider and coach, and have extensive experience working with riders of all ages and skill levels. Whether my students are beginners just starting out or experienced riders looking to improve their technique, I tailor my coaching to meet their unique needs and help them succeed. "
     }
-    picSource={"coach-jack.jpg"}
+    picSource={"/people/coach-jack.jpg"}
     picAlt={"Coach Jack Picture"}
     yearsRiding={"12"}
     awards={"+10"}
@@ -101,7 +101,7 @@ const Stefanie = (
     description={
       "I am passionate about helping riders develop their skills and reach their full potential. I have been riding horses for many years and have competed in various disciplines, including dressage, show jumping, and cross-country. I have worked with riders of all levels, from beginners to advanced competitors, and I take great pride in helping each one achieve their personal best. Whether you're looking to compete at a high level or simply enjoy riding as a hobby, I am dedicated to helping you succeed."
     }
-    picSource={"coach-stefanie.jpg"}
+    picSource={"/people/coach-stefanie.jpg"}
     picAlt={"Coach Stefanie Picture"}
     yearsRiding={"5"}
     awards={"+4"}

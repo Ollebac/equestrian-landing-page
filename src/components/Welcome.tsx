@@ -25,17 +25,17 @@ const Welcome = () => {
           <div className="more_horses_outer_container">
             <div className="more_horses_inner_container">
               <img
-                src="/horse-profile-1.jpg"
+                src="/welcome/horse-profile-1.jpg"
                 className="horse_profile_img"
                 alt="Horse 1 Image"
               />
               <img
-                src="/horse-profile-2.jpg"
+                src="/welcome/horse-profile-2.jpg"
                 className="horse_profile_img"
                 alt="Horse 1 Image"
               />
               <img
-                src="/horse-profile-3.jpg"
+                src="/welcome/horse-profile-3.jpg"
                 className="horse_profile_img"
                 alt="Horse 1 Image"
               />
@@ -47,12 +47,12 @@ const Welcome = () => {
         </div>
         <div className="welcome_image_container">
           <img
-            src="/background-farm.jpg"
+            src="/welcome/background-farm.jpg"
             alt="farmhouse-background"
             className="welcome_img"
           />
           <img
-            src="/horse-v3.png"
+            src="/welcome/horse-overlay.png"
             alt="horse image"
             className="horse_overlay"
           />
