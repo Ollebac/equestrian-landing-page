@@ -52,7 +52,7 @@ const Contact = () => {
       <div className="contact_right_container">
         <img
           src="/images/map-location.svg"
-          alt="Location on Map"
+          alt="Map Location"
           className="contact_map"
         />
       </div>
