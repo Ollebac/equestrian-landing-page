@@ -152,7 +152,7 @@ const Programs = () => {
                 </div>
                 <div className="date_and_price_container">
                   <img
-                    src="/icon-person.svg"
+                    src="/icons/asdfasdficon-person.svg"
                     width={50}
                     className="input_form_icon_person"
                   />

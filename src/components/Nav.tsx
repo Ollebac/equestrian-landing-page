@@ -21,7 +21,11 @@ const Nav = () => {
       </a>
       <nav className="outer_nav_container">
         <a className="site_logo_container" href="#home">
-          <img src="/site-logo.svg" className="site_logo" alt="Site Logo" />
+          <img
+            src="/site-logo/site-logo.svg"
+            className="site_logo"
+            alt="Site Logo"
+          />
         </a>
         <ul className="inner_nav_container">
           <li className="nav_item">
