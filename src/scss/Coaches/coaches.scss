@@ -1,13 +1,16 @@
-@use "../variables" as var;
+@use '../variables' as var;
+@import '../mixins.scss';
 
-@keyframes fadeIn-fadeOut {
+@keyframes fadeIn {
   0% {
     opacity: 0;
   }
-  10% {
+  100% {
     opacity: 1;
   }
-  90% {
+}
+@keyframes fadeOut {
+  0% {
     opacity: 1;
   }
   100% {
@@ -15,54 +18,62 @@
   }
 }
 
-.fadeIn_fadeOut {
-  opacity: 0;
-  animation-name: fadeIn-fadeOut;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
-  animation-duration: 6s;
-}
-
-.slideshow_container {
-  position: relative;
-  background-color: var.$bg_green;
-  border-radius: 20px;
-}
-
 .coaches_section_container {
   padding: 0 5%;
 }
 
-.my_slides {
-  display: none;
-  background-color: var.$bg_green;
-  z-index: -1;
-  border-radius: 20px;
-}
-
-.coach_title {
-  z-index: 3;
-  padding-bottom: 3vw;
-  text-align: center;
-}
-
-.coach_outer_container {
-  padding: 4vw 6vw 6vw;
-  background-color: white;
+.slideshow_container {
+  position: relative;
   border-radius: 20px 20px 0 0;
 }
 
+.coach_container {
+  padding: clamp(30px, 4vw, 90px) clamp(30px, 6vw, 90px);
+  background-color: white;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+}
+
+.coach_bottom_border {
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  width: 100%;
+  height: 30px;
+  border-radius: 0 0 20px 20px;
+  background-color: var.$bg_green;
+}
+
+.overlapping_coaches {
+  display: grid;
+}
+
+.coach_title {
+  @include font($size: var.$section_header);
+  text-align: center;
+}
+
 .coach_inner_container {
+  @include flexCentered($direction: column);
+  display: none;
+  grid-area: 1 / 1;
+}
+
+.fadeIn {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include easeIn($name: fadeIn, $duration: 2s);
+}
+
+.fadeOut {
+  opacity: 0;
+  @include easeIn($name: fadeOut, $duration: 1s);
 }
 
 .my_slides_left {
   width: 100%;
   max-width: 462px;
   height: 100%;
+  display: flex;
 }
 
 .my_slides_right {
@@ -73,32 +84,38 @@
 }
 
 .coach_pic {
-  width: 100%;
-  border-radius: 30px;
+  margin: auto;
+  border-radius: 20px;
+  max-height: 450px;
+  max-width: 100%;
 }
 
 .coach_name {
-  margin-bottom: 5vw;
+  @include font($size: var.$header_medium_text);
 }
 
 .coach_description {
-  padding-bottom: 5px;
+  @include font();
 }
 
-.coach_stats_container {
+.coach_stats_outer_container {
   display: flex;
   margin-bottom: 10px;
 }
 
-.coach_stat {
-  width: 30%;
-  margin-right: 5%;
+.coach_stats_inner_container {
+  width: clamp(100px, 20vw, 120px);
+  margin-right: clamp(5px, 2vw, 10px);
 }
 
 .coach_stat_number {
-  margin-bottom: 10px;
-  color: var.$bg_green;
-  font-weight: 700;
+  @include font($size: var.$header_medium_text, $bottom: 5px, $color: var.$bg_green, $weight: 700);
+  display: block;
+}
+
+.coach_stat_text {
+  @include font();
+  display: block;
 }
 
 .dot {
@@ -109,37 +126,28 @@
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6 ease;
+  transition: 0.6s ease;
 }
 
 .dots_container {
   display: none;
 }
 
-.active,
+.active_dot,
 .dot:hover {
   background-color: #717171;
 }
 
-@media screen and (min-width: 550px) {
-  .coach_stat {
-    width: 24%;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .dots_container {
-    display: block;
-    position: absolute;
-    bottom: 6vw;
-    right: 39vw;
+    @include flexCentered;
+    padding-top: 20px;
+    height: 20px;
   }
 
   .coach_inner_container {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: unset;
     min-height: 465px;
   }
 
@@ -149,49 +157,12 @@
 
   .my_slides_left {
     width: 40%;
-    margin: auto 0;
   }
 
   .my_slides_right {
     min-height: 100%;
     margin-top: 0;
     width: 50%;
-    align-items: start;
     justify-content: space-between;
-  }
-
-  .coach_stat {
-    width: 33%;
-  }
-
-  .coach_name {
-    margin-bottom: 10px;
-  }
-
-  .coach_stat_number {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .coach_title {
-    padding-bottom: 30px;
-  }
-
-  .dots_container {
-    bottom: 60px;
-  }
-
-  .coach_outer_container {
-    padding: 60px 90px 90px;
-    background-color: white;
-    border-radius: 20px 20px 0 0;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .dots_container {
-    bottom: 70px;
-    right: 585px;
   }
 }

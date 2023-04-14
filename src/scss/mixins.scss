@@ -1,0 +1,23 @@
+@use './variables' as var;
+
+@mixin easeIn($name, $duration) {
+  display: flex;
+  animation-name: $name;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: $duration;
+}
+
+@mixin flexCentered($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin font($size: var.$general_text, $bottom: 20px, $color: black, $weight: 500) {
+  font-size: $size;
+  padding-bottom: $bottom;
+  color: $color;
+  font-weight: $weight;
+}
