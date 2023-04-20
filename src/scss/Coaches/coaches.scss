@@ -109,7 +109,7 @@
 }
 
 .coach_stat_number {
-  @include font($size: var.$header_medium_text, $bottom: 5px, $color: var.$bg_green, $weight: 700);
+  @include font($size: var.$header_medium_text, $padding: 5px, $color: var.$bg_green, $weight: 700);
   display: block;
 }
 

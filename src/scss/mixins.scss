@@ -8,16 +8,41 @@
   animation-duration: $duration;
 }
 
+@mixin border_bottom($color: var.$fade_text_color) {
+  border-bottom: 1px solid $color;
+}
+
+@mixin input_button {
+  display: flex;
+  margin: 15px 0;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+@mixin flexed($direction: row, $justify: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
+
 @mixin flexCentered($direction: row) {
   display: flex;
   flex-direction: $direction;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
 
-@mixin font($size: var.$general_text, $bottom: 20px, $color: black, $weight: 500) {
+@mixin flexSpaced($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-content: center;
+}
+
+@mixin font($size: var.$general_text, $padding: 20px, $color: black, $weight: 500) {
   font-size: $size;
-  padding-bottom: $bottom;
+  padding-bottom: $padding;
   color: $color;
   font-weight: $weight;
 }

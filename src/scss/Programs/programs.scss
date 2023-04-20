@@ -1,44 +1,31 @@
-@use "../variables" as var;
+@use '../variables' as var;
+@import '../mixins.scss';
 
-@mixin input_button {
-  margin: 15px 0;
-  background-color: rgba(149, 149, 149, 0.199);
-  border-radius: 5px;
-  padding: 2px 5px 5px 10px;
-  height: calc(2rem + 1vw);
-}
-
-.programs_background {
+.programs_section_background {
   background-color: var.$bg_gray;
   color: white;
   padding: 40px 5%;
   position: relative;
 }
 
-.programs_title {
-  font-weight: 500;
-  padding-bottom: 10px;
+.programs_section_title {
+  @include font($size: var.$section_header, $color: white);
 }
 
 .programs_container {
-  display: flex;
-  flex-direction: column;
+  @include flexed($direction: column);
 }
 
 .programs_menu {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  @include flexed($direction: column, $justify: space-between);
 }
 
 .programs_menu_item {
+  @include font($size: var.$header_medium_text, $color: var.$fade_text_color);
+  @include border_bottom;
   padding: 35px 0;
-  border-bottom: 1px solid var.$fade_text_color;
   transition: 0.3s;
   cursor: pointer;
-  color: var.$fade_text_color;
-  display: inline;
-  // width: 30%;
 }
 
 .programs_menu_active {
@@ -46,19 +33,18 @@
   color: white;
 }
 
-.program_mobile {
+.program_description_mobile {
+  @include font($color: white);
   display: none;
-  transition: 0.8s;
 }
 
 .program_mobile_active {
+  @include border_bottom;
   display: block;
-  border-bottom: 1px solid var.$fade_text_color;
-  transition: 0.8s;
   padding-bottom: 35px;
 }
 
-.program_desktop {
+.program_description_desktop {
   display: none;
 }
 
@@ -70,29 +56,54 @@
   max-width: 500px;
   border-radius: 15px;
   padding: 25px;
-  margin: 50px auto;
+  margin: 40px auto 0;
 }
 
 .sign_up_header {
-  padding-bottom: 10px;
+  @include font($size: var.$header_medium_text, $padding: 10px);
+  font-weight: 700;
 }
 
 .sign_up_text {
-  padding-bottom: 10px;
+  @include font($padding: 10px);
 }
 
-.sign_up_form {
+.input_container {
+  @include input_button();
+  position: relative;
+
+  &:focus-within {
+    border: 2px solid var.$bg_green;
+  }
+}
+
+.input_label,
+.input_label_shift {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 15px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 20px;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.input_container:focus-within > .input_label,
+.input_label_shift {
+  transform: translateY(-20px);
+  font-size: 13px;
+  background: white;
+  padding: 0 3px;
+  color: var.$bg_green;
+  font-weight: bold;
 }
 
 .form_label {
   font-weight: 300;
   color: black;
   padding-bottom: 0px;
-}
-
-.input_container {
-  @include input_button();
-  // font-size: 1px;
 }
 
 //Phone Input plugin
@@ -103,58 +114,54 @@
 
 .PhoneInputCountry {
   @include input_button();
-  display: flex;
+  @include flexCentered($direction: row-reverse);
   margin: 0 15px 0 0;
-  padding-left: 0;
-  flex-direction: row-reverse;
-  align-content: center;
-  justify-content: center;
+  padding: 5px;
   max-width: 115px;
+
+  &:focus-within {
+    border: 2px solid var.$bg_green;
+  }
 }
 
 .PhoneInputCountrySelect {
-  margin: 0 10px;
-  font-size: 0;
+  margin: 0 5px;
   width: 20px;
-  padding: 3px;
 }
 
 .PhoneInputCountryIcon {
-  width: 10vw;
-  height: 100%;
   display: flex;
+  width: clamp(30px, 10vw, 40px);
 }
 
 .PhoneInputCountryIconImg {
-  max-height: 60%;
   border-radius: 2px;
-  margin: auto;
 }
 
 .PhoneInputInput {
   @include input_button();
-  display: inline-block;
   margin: 0;
   padding-left: 10px;
-  width: 100%;
+
+  &:focus-within {
+    border: 2px solid var.$bg_green;
+  }
 }
 
 //Quantity, date, and price
 .date_and_price_container {
-  display: flex;
+  @include flexSpaced;
   align-items: center;
-  justify-content: space-between;
   margin: 20px 10px;
-  height: 5vw;
 }
 
-.input_form_icon_person {
-  width: 10vw;
-  max-width: 50px;
-}
 .input_quantity_container {
-  display: flex;
   @include input_button();
+  display: flex;
+
+  &:focus-within {
+    border: 2px solid var.$bg_green;
+  }
 }
 
 .quantity_button {
@@ -166,13 +173,16 @@
 }
 
 .input_quantity {
-  display: inline-block;
   text-align: center;
 }
 
 .input_date_container {
   @include input_button();
   display: flex;
+
+  &:focus-within {
+    border: 2px solid var.$bg_green;
+  }
 }
 
 .date_input {
@@ -180,21 +190,14 @@
 }
 
 .form_price {
-  color: green;
+  @include font($size: var.$header_medium_text, $color: green, $padding: 0);
   font-weight: 700;
   margin: auto 0;
   cursor: default;
-  line-height: 0;
 }
 
-.form_price::after {
-  content: "$";
-  font-weight: 700;
-}
-
-.accept_submit_container {
-  display: flex;
-  align-content: center;
+.submit_form_container {
+  @include flexCentered();
   height: 5vw;
   margin: 15px 0 0;
   padding: 5px 0;
@@ -215,9 +218,8 @@
   margin-left: 10px;
 }
 
-.sign_up_btn {
+.join_us_btn {
   width: 100%;
-  height: 5vw;
   background-color: var.$bg_green;
   color: white;
   border: none;
@@ -225,41 +227,28 @@
   cursor: pointer;
 }
 
-@media screen and (min-width: 600px) {
-  .form_price {
-    font-size: calc((4.5 / 100) * 600px);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .input_container,
-  .date_and_price_container,
-  .input_quantity_container,
-  .input_date_container,
-  .PhoneInputCountry,
-  .PhoneInputInput,
-  .accept_submit_container,
-  .accept_box,
-  .sign_up_btn {
-    height: calc((5 / 100) * 768px);
-  }
+.input_container,
+.date_and_price_container,
+.input_quantity_container,
+.input_date_container,
+.PhoneInputCountry,
+.PhoneInputInput,
+.submit_form_container,
+.accept_box,
+.join_us_btn {
+  height: 35px;
 }
 
 @media screen and (min-width: 1000px) {
-  .programs_background {
+  .programs_section_background {
     margin-bottom: 50px;
     padding-top: 50px;
     padding-bottom: 0;
-    height: 815px;
-  }
-
-  .programs_title {
-    margin-bottom: 10px;
+    height: 760px;
   }
 
   .programs_container {
-    flex-direction: row;
-    justify-content: space-between;
+    @include flexSpaced();
     height: 92%;
   }
 
@@ -268,13 +257,11 @@
     min-width: 40%;
   }
 
-  .programs_container_desktop_right {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
+  .programs_container_right {
+    @include flexSpaced($direction: column);
     padding-top: 30px;
-    margin-left: 10%;
-    height: 96%;
+    width: 50%;
+    height: 92%;
   }
 
   .programs_menu_item:hover {
@@ -283,7 +270,7 @@
   }
 
   .programs_menu_active {
-    border-bottom: 1px solid var.$fade_text_color;
+    @include border-bottom();
   }
 
   .program_mobile_active {
@@ -292,25 +279,12 @@
 
   .program_desktop_active {
     display: block;
-    transition: 0.8s;
     line-height: 1.5;
     padding-bottom: 35px;
     width: 95%;
   }
 
   .sign_up_container {
-    margin: 0 0 -50px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .programs_background {
-    height: 760px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .programs_background {
-    height: 740px;
+    margin: 0 auto -50px;
   }
 }
