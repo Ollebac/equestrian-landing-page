@@ -1,10 +1,11 @@
-@use "../variables" as var;
+@use '../variables' as var;
+@import '../mixins.scss';
 
 @mixin max_text($currentSize) {
   font-size: calc(($currentSize / 100) * 1500px);
 }
 
-.welcome_container {
+.welcome_section_container {
   min-height: 600px;
   width: 100%;
   display: flex;
@@ -25,13 +26,17 @@
   font-weight: 500;
 }
 
-.welcome_title_1 {
+.welcome_title_1,
+.welcome_title_2 {
   display: inline-block;
+  @include font($size: var.$site_title, $padding: 0, $color: white);
+}
+
+.welcome_title_1 {
   margin-bottom: 15px;
 }
 
 .welcome_title_2 {
-  display: inline-block;
   margin-top: -20px;
 }
 
@@ -42,6 +47,11 @@
 
 .welcome_intro {
   margin-top: 20px;
+  @include font($size: var.$sub_title, $padding: 0, $color: white);
+}
+
+.welcome_text {
+  @include font($padding: 0, $color: white);
 }
 
 .welcome_button_container {
@@ -51,8 +61,8 @@
 
 .welcome_button {
   display: block;
-  background-color: var.$bg_green;
   text-align: center;
+  background-color: var.$bg_green;
   border-radius: 10px;
   padding: 10px 0;
   color: white;
@@ -92,17 +102,23 @@
 }
 
 @media screen and (min-width: 1000px) {
-  .welcome_container {
-    flex-direction: row;
-    justify-content: space-between;
+  .welcome_section_container {
+    @include flexSpaced();
+    // flex-direction: row;
+    // justify-content: space-between;
   }
 
   .welcome_content_container {
-    width: 35%;
+    width: 34%;
     background-color: unset;
     color: black;
     padding: 0;
     margin: auto 0 75px 5%;
+  }
+
+  .welcome_title_1,
+  .welcome_title_2 {
+    color: black;
   }
 
   .welcome_title_1,
@@ -112,6 +128,11 @@
 
   .welcome_title_2 {
     float: right;
+  }
+
+  .welcome_intro,
+  .welcome_text {
+    color: black;
   }
 
   .welcome_text {
@@ -130,8 +151,6 @@
 
   .welcome_button_container {
     margin: 50px auto auto 0;
-    width: 13vw;
-    max-width: calc((13 / 100) * 1500px);
     transition: 0.4s;
   }
 
@@ -153,6 +172,7 @@
   .more_horses_text {
     margin: auto 0 auto 10px;
     max-width: 50%;
+    @include font($padding: 0);
   }
 
   .horse_profile_img {
@@ -185,11 +205,5 @@
       100% 100%,
       0 100%
     );
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .welcome_button {
-    width: 200px;
   }
 }

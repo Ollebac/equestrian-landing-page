@@ -3,54 +3,54 @@ $bg_green: #a0b36c;
 $bg_gray: #252525;
 $fade_text_color: #f4f4f49c;
 
-$site_title: calc(2.8rem + 1vw);
-$site_title_subtext: calc(0.9rem + 1vw);
-$section_title: calc(2.2rem + 1vw);
-$sub_title: calc(1.3rem + 1vw);
-$general_text: calc(0.9rem + 1vw);
-$menu_title: calc(1.5rem + 1vw);
-$card_title: calc(1.15rem + 1vw);
+// $site_title: calc(2.8rem + 1vw);
+// $site_title_subtext: calc(0.9rem + 1vw);
+// $section_title: calc(2.2rem + 1vw);
+// $sub_title: calc(1.3rem + 1vw);
+// $general_text: calc(0.9rem + 1vw);
+// $menu_title: calc(1.5rem + 1vw);
+// $card_title: calc(1.15rem + 1vw);
 
-$desktop_site_title: 6.4vw;
-$desktop_site_title_subtext: 1.1vw;
-$desktop_sub_title: 2vw;
-$desktop_general_text: calc((1.1 / 100) * 1500px);
-$desktop_card_title: 2.7vw;
+// $desktop_site_title: 6.4vw;
+// $desktop_site_title_subtext: 1.1vw;
+// $desktop_sub_title: 2vw;
+// $desktop_general_text: calc((1.1 / 100) * 1500px);
+// $desktop_card_title: 2.7vw;
 
 //  calc((1 / 100) * 1500px);
 
-$max_site_title: calc((6.4 / 100) * 1500px);
-$max_site_title_subtext: calc((1.1 / 100) * 1500px);
-$max_section_title: calc((4.75 / 100) * 1000px);
-$max_sub_title: calc((2 / 100) * 1500px);
-$max_general_text: calc((1.1 / 100) * 1500px);
-$max_menu_title: calc((2 / 100) * 1500px);
-$max_card_title: calc((2.7 / 100) * 1000px);
+// $max_site_title: calc((6.4 / 100) * 1500px);
+// $max_site_title_subtext: calc((1.1 / 100) * 1500px);
+// $max_section_title: calc((4.75 / 100) * 1000px);
+// $max_sub_title: calc((2 / 100) * 1500px);
+// $max_general_text: calc((1.1 / 100) * 1500px);
+// $max_menu_title: calc((2 / 100) * 1500px);
+// $max_card_title: calc((2.7 / 100) * 1000px);
 
-$coach_name: calc(1.8rem + 1vw);
+// $coach_name: calc(1.8rem + 1vw);
 
 // $desktop_title_h1: 6.4vw;
 
 $desktop_nav_item: 1.5vw;
 $max_desktop_nav_item: 1.5;
-$max_desktop_welcome_to: 1.8;
-$max_desktop_welcome_title: 6.4;
-$max_desktop_welcome_text: 0.99;
+// $max_desktop_welcome_to: 1.8;
+// $max_desktop_welcome_title: 6.4;
+// $max_desktop_welcome_text: 0.99;
 
-//Signup Form ;
-$desktop_form_title: 4vw;
-$max_form_title: 4;
-// $form_title: 4vw;
-$form_description: calc(0.75rem + 1vw);
-// $form_description: 2vw;
-$max_form_description: 2;
+// //Signup Form ;
+// $desktop_form_title: 4vw;
+// $max_form_title: 4;
+// // $form_title: 4vw;
+// $form_description: calc(0.75rem + 1vw);
+// // $form_description: 2vw;
+// $max_form_description: 2;
 
-$form_title: calc(1.25rem + 1vw);
-$form_label: calc(0.4rem + 1vw);
-$form_input: calc(0.75rem + 1vw);
-$max_form_title: calc(1.25rem + ((1 / 100) * 612px));
-$max_form_label: calc(0.4rem + ((1 / 100) * 612px));
-$max_form_input: calc(0.75rem + ((1 / 100) * 612px));
+// $form_title: calc(1.25rem + 1vw);
+// // $form_label: calc(0.4rem + 1vw);
+// $form_input: calc(0.75rem + 1vw);
+// $max_form_title: calc(1.25rem + ((1 / 100) * 612px));
+// $max_form_label: calc(0.4rem + ((1 / 100) * 612px));
+// $max_form_input: calc(0.75rem + ((1 / 100) * 612px));
 
 $site_title: clamp(50px, 6.4vw, 96px);
 $sub_title: clamp(20px, 2vw, 30px);
@@ -58,3 +58,4 @@ $general_text: 16px;
 $section_header: clamp(42px, 4.75vw, 55px);
 $header_medium_text: clamp(25px, 2.5vw, 30px);
 $header_small_text: clamp(22.5px, 2.7vw, 25px);
+$form_small_text: 12px;

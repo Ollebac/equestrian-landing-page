@@ -219,6 +219,8 @@
 }
 
 .join_us_btn {
+  @include flexCentered();
+  @include font($padding: 0);
   width: 100%;
   background-color: var.$bg_green;
   color: white;
