@@ -16,7 +16,7 @@ const Reviews = () => {
             welcome and comfortable which is really important. Highly recommend!
           </p>
           <div className='reviewer_outer_container'>
-            <img src='.people/tom-sawyer.svg' className='reviewer_image' width={200} />
+            <img src='./people/tom-sawyer.svg' className='reviewer_image' width={200} />
             <div className='reviewer_inner_container'>
               <p className='reviewer_name'>Tom Sawyer</p>
               <p className='review_about'>Dressage</p>
