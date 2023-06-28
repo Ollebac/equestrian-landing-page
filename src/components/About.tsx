@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 const playVideo = () => {
   const button = document.getElementById('about_us_video_button');
   button!.style.display = 'none';
-  // button?.setAttribute("display", "none");
 
   const iframe = document.getElementById('iframe_horse_video');
   iframe?.setAttribute('src', iframe.getAttribute('src') + '&autoplay=1');
@@ -67,12 +66,7 @@ export const About = () => {
         </div>
         <div className='subscribe_container_cards'>
           <div className='subscribe_card_left'>
-            <form
-              action=''
-              // onSubmit={(e) => submitForm(e)}
-              className='email_form'
-              id='email_form'
-            >
+            <form action='' className='email_form' id='email_form'>
               <h3 className='subscribe_title headerSmall'>
                 Subscribe to the newsletter and get 5% discount on your first training
               </h3>
