@@ -1,4 +1,4 @@
-@use "../variables" as var;
+@use '../variables' as var;
 
 .input_email {
   background-color: rgba(149, 149, 149, 0.199);
@@ -10,13 +10,7 @@
 
 .about_us_background {
   padding: 0 5%;
-  background: linear-gradient(
-    180deg,
-    var.$bg_white 15%,
-    var.$bg_gray 15%,
-    var.$bg_gray 93%,
-    var.$bg_white 93%
-  );
+  background: linear-gradient(180deg, var.$bg_white 15%, var.$bg_gray 15%, var.$bg_gray 93%, var.$bg_white 93%);
 }
 
 .about_us_content_container {
@@ -62,7 +56,7 @@
   bottom: 0vw;
   right: 0;
   cursor: pointer;
-  background-image: url("../../../public/images/horse-video-overlay.png");
+  background-image: url('../../../public/images/horse-video-overlay.png');
   background-size: cover;
   border: none;
   display: block;
@@ -119,7 +113,7 @@
 
 .subscribe_container_cards {
   display: grid;
-  grid-template-areas: "subscribe_card_right" "subscribe_card_left";
+  grid-template-areas: 'subscribe_card_right' 'subscribe_card_left';
   grid-template-rows: repeat(2);
   width: 100%;
   column-gap: 2vw;
@@ -160,6 +154,8 @@
 .sign_up_btn {
   width: 100%;
   height: 30px;
+  border-width: 0px;
+  color: white;
   background-color: var.$bg_green;
   border-radius: 10px;
   cursor: pointer;
@@ -180,13 +176,7 @@
 
 @media screen and (min-width: 1000px) {
   .about_us_background {
-    background: linear-gradient(
-      180deg,
-      var.$bg_white 45vw,
-      var.$bg_gray 45vw,
-      var.$bg_gray 85%,
-      var.$bg_white 85%
-    );
+    background: linear-gradient(180deg, var.$bg_white 45vw, var.$bg_gray 45vw, var.$bg_gray 85%, var.$bg_white 85%);
   }
 
   .about_us_cards_container {
@@ -200,7 +190,7 @@
 
   .subscribe_container_cards {
     display: grid;
-    grid-template-areas: "subscribe_card_left subscribe_card_right";
+    grid-template-areas: 'subscribe_card_left subscribe_card_right';
     grid-template-columns: repeat(2, minmax(0, 1fr));
     column-gap: 2vw;
     width: 100%;
