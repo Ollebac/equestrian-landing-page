@@ -22,9 +22,9 @@ const Welcome = () => {
           </div>
           <div className='more_horses_outer_container'>
             <div className='more_horses_inner_container'>
-              <img src='/welcome/horse-profile-1.jpg' className='horse_profile_img' alt='Horse 1 Image' />
-              <img src='/welcome/horse-profile-2.jpg' className='horse_profile_img' alt='Horse 1 Image' />
-              <img src='/welcome/horse-profile-3.jpg' className='horse_profile_img' alt='Horse 1 Image' />
+              <img src='/welcome/horse-profile-1.jpg' className='horse_profile_img' alt='Small Horse Image v1' />
+              <img src='/welcome/horse-profile-2.jpg' className='horse_profile_img' alt='Small Horse Image v2' />
+              <img src='/welcome/horse-profile-3.jpg' className='horse_profile_img' alt='Small Horse Image v3' />
             </div>
             <p className='more_horses_text'>More than 20 horses for different levels of riders.</p>
           </div>
