@@ -283,7 +283,7 @@ const Programs = () => {
 
                 {/* Date and Price */}
                 <div className='date_and_price_container'>
-                  <img src='/icons/icon-person.svg' width={40} className='input_form_icon_person' />
+                  <img src='./icons/icon-person.svg' width={40} className='input_form_icon_person' />
                   <div className='input_quantity_container'>
                     <button
                       className='quantity_button'
