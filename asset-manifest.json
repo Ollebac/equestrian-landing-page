@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/equestrian-landing-page/static/css/main.b608d82d.css",
+    "main.js": "/equestrian-landing-page/static/js/main.b8491303.js",
+    "static/media/horse-video-overlay.png": "/equestrian-landing-page/static/media/horse-video-overlay.6a6433be7c7f7ee504e2.png",
+    "index.html": "/equestrian-landing-page/index.html",
+    "main.b608d82d.css.map": "/equestrian-landing-page/static/css/main.b608d82d.css.map",
+    "main.b8491303.js.map": "/equestrian-landing-page/static/js/main.b8491303.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b608d82d.css",
+    "static/js/main.b8491303.js"
+  ]
+}
