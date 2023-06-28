@@ -1,4 +1,4 @@
-@use "../variables" as var;
+@use '../variables' as var;
 
 .footer_section_background {
   background-color: var.$bg_gray;
@@ -67,11 +67,10 @@
 @media screen and (min-width: 768px) {
   .footer_section_container {
     display: grid;
-    // grid-auto-rows: 1fr;
     grid-auto-columns: 1fr;
     grid-template-areas:
-      "footer1 footer1 footer2 footer2"
-      ". footer3 footer3 .";
+      'footer1 footer1 footer2 footer2'
+      '. footer3 footer3 .';
     gap: 50px;
   }
 
