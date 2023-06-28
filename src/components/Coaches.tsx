@@ -92,18 +92,15 @@ const Coaches = () => {
     setTimeout(() => {
       if (autoScroll.current === true) {
         if (coachRef.current === 3) {
-          console.log('setting coach from 3');
           setActiveCoach(0);
           setFadeOutCoach(3);
           coachRef.current = 0;
         } else {
-          console.log('setting new coach');
           setFadeOutCoach(coachRef.current);
           coachRef.current++;
           setActiveCoach(coachRef.current);
         }
       } else {
-        console.log('resetting auto');
         autoScroll.current = true;
       }
     }, 8000);
