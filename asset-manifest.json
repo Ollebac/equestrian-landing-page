@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/equestrian-landing-page/static/css/main.b608d82d.css",
-    "main.js": "/equestrian-landing-page/static/js/main.b8491303.js",
-    "static/media/horse-video-overlay.png": "/equestrian-landing-page/static/media/horse-video-overlay.6a6433be7c7f7ee504e2.png",
-    "index.html": "/equestrian-landing-page/index.html",
-    "main.b608d82d.css.map": "/equestrian-landing-page/static/css/main.b608d82d.css.map",
-    "main.b8491303.js.map": "/equestrian-landing-page/static/js/main.b8491303.js.map"
+    "main.css": "/static/css/main.34dcc517.css",
+    "main.js": "/static/js/main.f9e48d42.js",
+    "static/media/horse-video-overlay.png": "/static/media/horse-video-overlay.6a6433be7c7f7ee504e2.png",
+    "index.html": "/index.html",
+    "main.34dcc517.css.map": "/static/css/main.34dcc517.css.map",
+    "main.f9e48d42.js.map": "/static/js/main.f9e48d42.js.map"
   },
   "entrypoints": [
-    "static/css/main.b608d82d.css",
-    "static/js/main.b8491303.js"
+    "static/css/main.34dcc517.css",
+    "static/js/main.f9e48d42.js"
   ]
 }
