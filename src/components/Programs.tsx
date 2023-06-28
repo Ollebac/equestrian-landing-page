@@ -114,6 +114,8 @@ const Programs = () => {
       date: '',
       price: 0,
     });
+
+    document.getElementById('checkbox')?.click();
   };
 
   useEffect(() => {
@@ -222,6 +224,7 @@ const Programs = () => {
                         name: e.target.value,
                       }))
                     }
+                    value={formData.name}
                     id='form_input_name'
                     name='first_name'
                     required
@@ -238,6 +241,7 @@ const Programs = () => {
                         email: e.target.value,
                       }))
                     }
+                    value={formData.email}
                     id='form_input_email'
                     name='email'
                     required
@@ -270,6 +274,7 @@ const Programs = () => {
                         program: e.target.value,
                       }));
                     }}
+                    value={formData.program}
                     name='program'
                     required
                   >
@@ -334,7 +339,7 @@ const Programs = () => {
                   <span className='form_price'>${formData.price}</span>
                 </div>
                 <div className='submit_form_container'>
-                  <input type='checkbox' className='accept_box' name='accept' required />
+                  <input id='checkbox' type='checkbox' className='accept_box' name='accept' required />
                   <p className='sign_up_text'>
                     I accept the Terms and Conditions and the
                     <a href='#'> Privacy Policy</a>.
