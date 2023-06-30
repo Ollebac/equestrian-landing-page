@@ -1,3 +1,5 @@
+@use '../variables' as var;
+
 .faq_section_container {
   margin: clamp(30px, 10vw, 100px) 5%;
   display: flex;
@@ -13,36 +15,35 @@
 }
 
 .faq_question {
+  font-size: var.$question_text;
+  color: black;
   font-weight: 500;
-  padding: clamp(5px, 2vw, 20px) 60px clamp(5px, 2vw, 20px) 0;
-  position: relative;
-  display: block;
-  width: 105%;
+  padding: 0 30px 0 0;
+  margin: clamp(5px, 2vw, 20px) 0;
+  line-height: 16px;
+  display: inline-block;
+  width: 100%;
   text-align: left;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.faq_question_inactive::after {
-  content: "+";
-  position: absolute;
+.faq_question_inactive::after,
+.faq_question_active::after {
+  content: '+';
+  color: black;
+  font-size: var.$header_medium_text;
   margin: auto 0;
-  right: 5px;
-  background: white;
-  padding: 1px 8px 3px;
-  border-radius: 50%;
+  float: right;
+  margin: auto;
   font-weight: bold;
+  transform: translate(0, -2px);
 }
 
 .faq_question_active::after {
-  content: "-";
-  position: absolute;
-  right: 5px;
-  background: white;
-  padding: 1px 13px 3px;
-  border-radius: 50%;
-  font-weight: bold;
+  content: '-';
+  transform: translate(-3px, -2px);
 }
 
 .faq_answer_inactive {
@@ -52,6 +53,7 @@
 .faq_answer_active {
   display: block;
   padding-bottom: clamp(5px, 2vw, 20px);
+  color: rgb(56, 56, 56);
 }
 
 @media screen and (min-width: 1000px) {
