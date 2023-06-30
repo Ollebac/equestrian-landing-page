@@ -44,13 +44,13 @@ type FormDataType = {
 const Programs = () => {
   const today = new Date();
   const day = today.getDate();
-  let month;
+  let month: string;
   const year = today.getFullYear();
 
   if (today.getMonth() < 10) {
     month = '0' + today.getMonth().toString();
   } else {
-    month = today.getDate();
+    month = today.getDate().toString();
   }
 
   const [descriptionActive, setDescriptionActive] = useState<Number>(0);
@@ -122,7 +122,7 @@ const Programs = () => {
       phone: '',
       program: '',
       quantity: 1,
-      date: '',
+      date: `${year}-${month}-${day}`,
       price: 0,
     });
 
