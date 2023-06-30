@@ -68,6 +68,11 @@
   @include font($padding: 10px);
 }
 
+.accept_terms_text {
+  @include font($size: 12px, $padding: 10px);
+  padding: 0 10px 0 0;
+}
+
 .input_container {
   @include input_button();
   position: relative;
@@ -136,6 +141,7 @@
 
 .PhoneInputCountryIconImg {
   border-radius: 2px;
+  width: 100%;
 }
 
 .PhoneInputInput {
