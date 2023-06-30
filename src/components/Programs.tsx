@@ -42,6 +42,17 @@ type FormDataType = {
 };
 
 const Programs = () => {
+  const today = new Date();
+  const day = today.getDate();
+  let month;
+  const year = today.getFullYear();
+
+  if (today.getMonth() < 10) {
+    month = '0' + today.getMonth().toString();
+  } else {
+    month = today.getDate();
+  }
+
   const [descriptionActive, setDescriptionActive] = useState<Number>(0);
 
   const [formData, setFormData] = useState<FormDataType>({
@@ -50,7 +61,7 @@ const Programs = () => {
     phone: '',
     program: '',
     quantity: 1,
-    date: '',
+    date: `${year}-${month}-${day}`,
     price: 0,
   });
 
@@ -340,7 +351,7 @@ const Programs = () => {
                 </div>
                 <div className='submit_form_container'>
                   <input id='checkbox' type='checkbox' className='accept_box' name='accept' required />
-                  <p className='sign_up_text'>
+                  <p className='accept_terms_text'>
                     I accept the Terms and Conditions and the
                     <a href='#'> Privacy Policy</a>.
                   </p>
