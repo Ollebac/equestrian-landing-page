@@ -37,7 +37,7 @@ export const About = () => {
         </div>
         <div className='about_us_cards_container'>
           <div className='about_us_card'>
-            <img src='./icons/icon-heart.svg' className='about_us_icon' />
+            <img src='./icons/icon-heart.svg' alt='Heart Icon' className='about_us_icon' />
             <h3 className='about_us_card_title headerSmall'>Developing a strong bond with the horse</h3>
             <p className='about_us_card_description general_text'>
               Participating in an equestrian club provides riders with the opportunity to form a strong and trusting
@@ -46,7 +46,7 @@ export const About = () => {
             </p>
           </div>
           <div className='about_us_card'>
-            <img src='./icons/icon-checkmark.svg' className='about_us_icon' />
+            <img src='./icons/icon-checkmark.svg' alt='Checkmark Icon' className='about_us_icon' />
             <h3 className='about_us_card_title headerSmall'>Learning new skills</h3>
             <p className='about_us_card_description general_text'>
               Equestrian clubs offer riders the chance to learn a variety of skills and techniques, including dressage,
@@ -55,7 +55,7 @@ export const About = () => {
             </p>
           </div>
           <div className='about_us_card'>
-            <img src='./icons/icon-people.svg' className='about_us_icon' />
+            <img src='./icons/icon-people.svg' alt='Group Icon' className='about_us_icon' />
             <h3 className='about_us_card_title headerSmall'>Networking and camaraderie</h3>
             <p className='about_us_card_description general_text'>
               Joining an equestrian club provides members with a great opportunity to meet other riders, exchange ideas,
@@ -88,7 +88,7 @@ export const About = () => {
               </div>
             </form>
           </div>
-          <img src='./images/horse-subscribe.jpg' alt='Horse Image' className='subscribe_card_right' />
+          <img src='./images/horse-subscribe.jpg' alt='White Horse' className='subscribe_card_right' />
         </div>
       </div>
     </section>

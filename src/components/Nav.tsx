@@ -17,7 +17,7 @@ const Nav = () => {
   return (
     <>
       <a className='nav_bubble' id='nav_bubble' onClick={openNav}>
-        <img src='./icons/icon-hamburger.svg' width={30} height={20} />
+        <img src='./icons/icon-hamburger.svg' alt='Menu Icon' width={30} height={20} />
       </a>
       <nav className='outer_nav_container'>
         <a className='site_logo_container' href='#home'>

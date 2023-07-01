@@ -16,7 +16,7 @@ const Reviews = () => {
             welcome and comfortable which is really important. Highly recommend!
           </p>
           <div className='reviewer_outer_container'>
-            <img src='./people/tom-sawyer.svg' className='reviewer_image' width={200} />
+            <img src='./people/tom-sawyer.svg' alt='Tom Sawyer' className='reviewer_image' width={200} />
             <div className='reviewer_inner_container'>
               <p className='reviewer_name'>Tom Sawyer</p>
               <p className='review_about'>Dressage</p>
@@ -30,7 +30,7 @@ const Reviews = () => {
             each lesson an enjoyable experience. Highly recommend!
           </p>
           <div className='reviewer_outer_container'>
-            <img src='./people/jessica-clines.svg' className='reviewer_image' width={200} />
+            <img src='./people/jessica-clines.svg' alt='Jessica Clines' className='reviewer_image' width={200} />
             <div className='reviewer_inner_container'>
               <p className='reviewer_name'>Jessica Clines</p>
               <p className='review_about'>Jumping</p>
@@ -46,7 +46,7 @@ const Reviews = () => {
             responsive to the riders.
           </p>
           <div className='reviewer_outer_container'>
-            <img src='./people/terry-jones.svg' className='reviewer_image' width={200} />
+            <img src='./people/terry-jones.svg' alt='Terry Jones' className='reviewer_image' width={200} />
             <div className='reviewer_inner_container'>
               <p className='reviewer_name'>Terry Jones</p>
               <p className='review_about'>Horse rides</p>
@@ -60,7 +60,7 @@ const Reviews = () => {
             top notch.
           </p>
           <div className='reviewer_outer_container'>
-            <img src='./people/isabel-flora.svg' className='reviewer_image' width={200} />
+            <img src='./people/isabel-flora.svg' alt='Isabel Flora' className='reviewer_image' width={200} />
             <div className='reviewer_inner_container'>
               <p className='reviewer_name'>Isabel Flora</p>
               <p className='review_about'>Horse rides</p>

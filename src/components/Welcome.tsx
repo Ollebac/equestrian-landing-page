@@ -22,16 +22,16 @@ const Welcome = () => {
           </div>
           <div className='more_horses_outer_container'>
             <div className='more_horses_inner_container'>
-              <img src='./welcome/horse-profile-1.jpg' className='horse_profile_img' alt='Small Horse Image v1' />
-              <img src='./welcome/horse-profile-2.jpg' className='horse_profile_img' alt='Small Horse Image v2' />
-              <img src='./welcome/horse-profile-3.jpg' className='horse_profile_img' alt='Small Horse Image v3' />
+              <img src='./welcome/horse-profile-1.jpg' className='horse_profile_img' alt='Brown Horse Profile Pic' />
+              <img src='./welcome/horse-profile-2.jpg' className='horse_profile_img' alt='Brown Horse Profile Pic' />
+              <img src='./welcome/horse-profile-3.jpg' className='horse_profile_img' alt='Grey Horse Profile Pic' />
             </div>
             <p className='more_horses_text'>More than 20 horses for different levels of riders.</p>
           </div>
         </div>
         <div className='welcome_image_container'>
-          <img src='./welcome/background-farm.jpg' alt='farmhouse-background' className='welcome_img' />
-          <img src='./welcome/horse-overlay.png' alt='horse image' className='horse_overlay' />
+          <img src='./welcome/background-farm.jpg' alt='Farmhouse Background' className='welcome_img' />
+          <img src='./welcome/horse-overlay.png' alt='White Horse' className='horse_overlay' />
         </div>
       </div>
     </>
