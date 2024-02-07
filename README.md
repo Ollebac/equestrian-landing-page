@@ -1,6 +1,6 @@
 # Equestrian Landing Page
 
-This project was created using React and is based off the below image found on <a href="https://www.behance.net/gallery/162820093/Landing-page-for-equestrian-club?tracking_source=search_projects%7Cwebsite+design+horse">Behance</a>. 
+This project was created using React and is based off the below image found on <a href="https://www.behance.net/gallery/162820093/Landing-page-for-equestrian-club?tracking_source=search_projects%7Cwebsite+design+horse" target="_blank">Behance</a>. 
 
 Using this image, I created a fully functional landing page with functional forms, slideshows, and image carousels.
 
