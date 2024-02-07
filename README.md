@@ -4,4 +4,6 @@ This project was created using React and is based off the below image found on <
 
 Using this image, I created a fully functional landing page with functional forms, slideshows, and image carousels.
 
+To view the functional landing page, <a href="https://ollebac.github.io/equestrian-landing-page/" target="_blank">click here</a>.
+
 ![ad50ba162820093 63dbb64526eb9](https://github.com/Ollebac/equestrian-landing-page/assets/96888356/6433d555-2f70-4521-8227-7a6d828a0b52)
